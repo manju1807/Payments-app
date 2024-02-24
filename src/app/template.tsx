@@ -12,10 +12,10 @@ function Template({ children }) {
 
   return (
     isClient && (
-      <div className='min-h-screen w-full flex'>
-        <main className='w-full flex flex-row'>
+      <div className='min-h-screen w-full max-w-screen flex'>
+        <main className='w-full flex flex-row max-w-screen'>
           <SideNavbar />
-          <div className='p-8 w-full'>{children}</div>
+          <div className='p-8 w-full max-w-screen'>{children}</div>
         </main>
       </div>
     )
