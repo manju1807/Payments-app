@@ -43,7 +43,7 @@ export default function PaymentList() {
     <RootLayout>
       <div className='flex flex-col border-b pb-2 mb-4'>
         <PageTitle title='Payment List' />
-        <p className='text-sm text-primary tracking-tight'>
+        <p className='text-sm text-gray-600 tracking-tight'>
           A list of your recent Payments.
         </p>
       </div>
@@ -62,7 +62,7 @@ export default function PaymentList() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {filteredPaymentList.map((payment, index) => (
+          {filteredPaymentList.slice(0, 16).map((payment: any, index) => (
             <TableRow key={index} className='text-left'>
               <TableCell>{index + 1}</TableCell>
               <TableCell className='font-medium'>{payment.id}</TableCell>

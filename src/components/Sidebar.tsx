@@ -23,8 +23,11 @@ function SideNavbar() {
     <div
       className={`relative ${
         isCollapsed ? 'sm:w-fit md:min-w-fit' : 'sm:min-w-fit md:min-w-64'
-      } border-r px-3 pb-10 pt-24 bg-violet-400`}
+      } border-r px-3 pb-10 pt-16 bg-violet-400`}
     >
+      <h1 className='text-xl font-semibold tracking-tight text-center pb-12'>
+        {isCollapsed ? '' : 'Payment Management'}
+      </h1>
       <Button
         onClick={toggleSidebar}
         variant='secondary'
