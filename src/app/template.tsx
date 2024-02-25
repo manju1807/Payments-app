@@ -3,7 +3,11 @@
 import SideNavbar from '@/components/Sidebar';
 import { useEffect, useState } from 'react';
 
-function Template({ children }) {
+function Template({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const [isClient, setClient] = useState(false);
 
   useEffect(() => {
